@@ -1,0 +1,1 @@
+[some escaped \[ brackets \]](example.com)
