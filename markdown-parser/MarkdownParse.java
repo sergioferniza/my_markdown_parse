@@ -5,14 +5,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-/* Random change to test git commit and push on ieng6 */
+
 public class MarkdownParse {
     static final int nonexistent = -1;
 
-    /** 
-    *   This method takes in a String and returns all the links within the 
-        String.
-    */
     public static ArrayList<String> getLinks(String markdown) {
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then read link upto next )
@@ -62,9 +58,9 @@ public class MarkdownParse {
 
 
     public static void main(String[] args) throws IOException {
-        Path fileName = Path.of(args[0]);
-        String content = Files.readString(fileName);
-        ArrayList<String> links = getLinks(content);
+        Path file = Path.of(args[0]);
+        String fileContent = Files.readString(file);
+        ArrayList<String> links = getLinks(fileContent);
 	    System.out.println(links);
         System.out.println("Next File");
     }
